@@ -7855,6 +7855,11 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-use-wizard@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/react-use-wizard/-/react-use-wizard-2.2.4.tgz#836f417cb8a4762ae9fe570b53415f64dcbda3c8"
+  integrity sha512-2GkKtV3VD3n1PWkfYy82W4pnUA9G3PRgwIg0vCJlmYAUxLA7k+o1kVognFMlPM3is5t9N5L5/+gSIw/4fhNh6A==
+
 react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"

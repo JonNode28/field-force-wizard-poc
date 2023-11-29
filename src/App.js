@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import {Wizard} from "react-use-wizard";
+import {Step} from "./Step";
+import {createContext, useState} from "react";
+import {DraftContext} from "./DraftContext";
 
 function App() {
+  const [draft, setDraft] = useState({
+    propertyAccessible: ''
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DraftContext.Provider value={{ draft, setDraft}}>
+        <Wizard>
+          <Step step={1} />
+          {draft.propertyAccessible === 'yes' && (
+            <>
+              <Step step={2} />
+              <Step step={3} />
+            </>)}
+          <Step step={4} />
+        </Wizard>
+      </DraftContext.Provider>
     </div>
   );
 }
